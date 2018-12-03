@@ -11,12 +11,10 @@ function computerPlay() {
 
 let playerScore = 0;
 let computerScore = 0;
-let currentScoreBoard = "| Score | You: 0 | Computer: 0";
+let currentScoreBoard = "| Score is You: 0 | Computer: 0";
 
-function resetScore(){
-    playerScore = 0;
-    computerScore = 0;
-}
+startPlay();
+
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection == computerSelection){
@@ -54,6 +52,11 @@ function scoreKeeper(result){
 }
 
 function startPlay() {
-    let playerInput = prompt("Rock, Paper, or Scissors");
+    playerInput = prompt("Rock, Paper, or Scissors");
     playRound(playerInput, computerPlay());
+}
+
+function resetScore(){
+    playerScore = 0;
+    computerScore = 0;
 }
